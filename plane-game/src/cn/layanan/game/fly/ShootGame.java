@@ -1,8 +1,10 @@
-package cn.layanan.fly;
+package cn.layanan.game.fly;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -129,6 +131,7 @@ public class ShootGame extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Fly");
         ShootGame game = new ShootGame();
+        game.setFocusable(true);
         frame.add(game);
         frame.setSize(WIDTH, HEIGHT);
         frame.setAlwaysOnTop(true);
@@ -136,6 +139,7 @@ public class ShootGame extends JPanel {
         frame.setIconImage(new ImageIcon("images/icon.jpg").getImage()); // 设置窗体的图标
         frame.setLocationRelativeTo(null); // 设置窗体初始位置
         frame.setVisible(true); // 尽快调用paint
+        frame.requestFocus();
 
         game.action(); // 启动执行
     }
@@ -188,6 +192,32 @@ public class ShootGame extends JPanel {
         this.addMouseListener(l);
         this.addMouseMotionListener(l);
 
+        KeyAdapter k = new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                System.out.println(e.getKeyCode());
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_UP:
+                        hero.up();
+                        repaint();
+                        break;
+                    case KeyEvent.VK_DOWN:
+                        hero.down();
+                        repaint();
+                        break;
+                    case KeyEvent.VK_LEFT:
+                        hero.left();
+                        repaint();
+                        break;
+                    case KeyEvent.VK_RIGHT:
+                        hero.right();
+                        repaint();
+                        break;
+                }
+            }
+        };
+        this.addKeyListener(k);
+
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -205,7 +235,7 @@ public class ShootGame extends JPanel {
         }, intervel, intervel);
     }
 
-    int flyEnteredIndex = 0;//飞信无入场计数
+    int flyEnteredIndex = 0;//飞机入场计数
 
     public void enterAction() {
         flyEnteredIndex++;

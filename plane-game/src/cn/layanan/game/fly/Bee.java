@@ -1,4 +1,4 @@
-package cn.layanan.fly;
+package cn.layanan.game.fly;
 
 import java.util.Random;
 
@@ -43,4 +43,15 @@ public class Bee extends FlyingObject implements Award {
             xSpeed = 1;
         }
     }
+
+    public static void main(String[] args) {
+        int i = 0;
+        while (true) {
+            int a = 40;
+            a -= i / 10;
+            System.out.println(a);
+            i++;
+        }
+    }
+
 }

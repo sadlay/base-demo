@@ -1,4 +1,4 @@
-package cn.layanan.fly;
+package cn.layanan.game.fly;
 
 /**
  * @Description 奖励
@@ -17,4 +17,6 @@ public interface Award {
      * @Date 2019/7/26 23:27
      */
     int getType();
+
+
 }

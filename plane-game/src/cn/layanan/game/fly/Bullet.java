@@ -1,4 +1,4 @@
-package cn.layanan.fly;
+package cn.layanan.game.fly;
 
 /**
  * @Description 子弹类，是飞行物

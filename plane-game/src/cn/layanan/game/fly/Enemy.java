@@ -1,4 +1,4 @@
-package cn.layanan.fly;
+package cn.layanan.game.fly;
 
 /**
  * @Description 敌人，击中有分数

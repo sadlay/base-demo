@@ -1,4 +1,4 @@
-package cn.layanan.fly;
+package cn.layanan.game.fly;
 
 import java.awt.image.BufferedImage;
 
@@ -10,6 +10,8 @@ import java.awt.image.BufferedImage;
 public class Hero extends FlyingObject {
     private BufferedImage[] images = {};  //英雄机图片
     private int index = 0;  //英雄机图片切换索引
+
+    private int speed = 15; //移动的速度
 
 
     private int doubleFire; //双倍火力
@@ -81,6 +83,22 @@ public class Hero extends FlyingObject {
     public void moveTo(int x, int y) {
         this.x = x - width / 2;
         this.y = y - height / 2;
+    }
+
+    public void left() {
+        this.x -= speed;
+    }
+
+    public void right() {
+        this.x += speed;
+    }
+
+    public void up() {
+        this.y -= speed;
+    }
+
+    public void down() {
+        this.y += speed;
     }
 
     /**
