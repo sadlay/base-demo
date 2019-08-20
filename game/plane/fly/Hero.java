@@ -1,4 +1,4 @@
-package cn.layanan.game.fly;
+package game.plane.fly;
 
 import java.awt.image.BufferedImage;
 
