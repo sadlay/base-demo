@@ -1,4 +1,4 @@
-package game.plane.fly;
+package fly;
 
 /**
  * @Description 奖励

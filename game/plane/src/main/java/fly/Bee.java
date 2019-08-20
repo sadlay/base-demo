@@ -1,4 +1,4 @@
-package game.plane.fly;
+package fly;
 
 import java.util.Random;
 

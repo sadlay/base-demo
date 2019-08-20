@@ -1,4 +1,4 @@
-package game.plane.fly;
+package fly;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -50,18 +50,15 @@ public class ShootGame extends JPanel {
 
     static { // 静态代码块，初始化图片资源
         try {
-            background = ImageIO.read(ShootGame.class
-                    .getResource("background.png"));
-            start = ImageIO.read(ShootGame.class.getResource("start.png"));
-            airplane = ImageIO
-                    .read(ShootGame.class.getResource("airplane.png"));
-            bee = ImageIO.read(ShootGame.class.getResource("bee.png"));
-            bullet = ImageIO.read(ShootGame.class.getResource("bullet.png"));
-            hero0 = ImageIO.read(ShootGame.class.getResource("hero0.png"));
-            hero1 = ImageIO.read(ShootGame.class.getResource("hero1.png"));
-            pause = ImageIO.read(ShootGame.class.getResource("pause.png"));
-            gameover = ImageIO
-                    .read(ShootGame.class.getResource("gameover.png"));
+            background = ImageIO.read(ShootGame.class.getResource("/background.png"));
+            start = ImageIO.read(ShootGame.class.getResource("/start.png"));
+            airplane = ImageIO.read(ShootGame.class.getResource("/airplane.png"));
+            bee = ImageIO.read(ShootGame.class.getResource("/bee.png"));
+            bullet = ImageIO.read(ShootGame.class.getResource("/bullet.png"));
+            hero0 = ImageIO.read(ShootGame.class.getResource("/hero0.png"));
+            hero1 = ImageIO.read(ShootGame.class.getResource("/hero1.png"));
+            pause = ImageIO.read(ShootGame.class.getResource("/pause.png"));
+            gameover = ImageIO.read(ShootGame.class.getResource("/gameover.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }

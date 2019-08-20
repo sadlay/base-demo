@@ -1,4 +1,4 @@
-package game.plane.fly;
+package fly;
 
 /**
  * @Description 敌人，击中有分数
