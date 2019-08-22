@@ -85,7 +85,7 @@ public class ArrayStack<E> {
      * @return boolean
      */
     public boolean isEmpty() {
-        return size() == -1;
+        return size() == 0;
     }
 
     /**
