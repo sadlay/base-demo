@@ -11,7 +11,7 @@ import java.util.Collections;
  * @Modified By:IntelliJ IDEA
  */
 
-public class MyStack {
+public class  MyStack {
 
     private int[] array;
     private int maxSize;
