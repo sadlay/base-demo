@@ -1,5 +1,8 @@
 package stack;
 
+import list.MyArrayList;
+import list.MyList;
+
 /**
  * StringReversalTest 字符串翻转测试
  *
@@ -21,5 +24,6 @@ public class StringReversalTest {
             System.out.print(stack.pop());
         }
         System.out.println();
+
     }
 }
