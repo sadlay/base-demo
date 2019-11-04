@@ -11,21 +11,21 @@ public class MyArrayList<E> implements MyList<E> {
     private static final int DEFAULT_CAPACITY = 10;
     private static final Object[] EMPTY_ELEMENTDATA = {};
     private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
-    private Object[] elementsData;
+    private Object[] elementData;
     private int size;
 
     public MyArrayList(int initialCapacity) {
         if (initialCapacity > 0) {
-            this.elementsData = new Object[initialCapacity];
+            this.elementData = new Object[initialCapacity];
         } else if (initialCapacity == 0) {
-            this.elementsData = EMPTY_ELEMENTDATA;
+            this.elementData = EMPTY_ELEMENTDATA;
         } else {
             throw new IllegalArgumentException("Illegal Capacity: " + initialCapacity);
         }
     }
 
     public MyArrayList() {
-        this.elementsData = EMPTY_ELEMENTDATA;
+        this.elementData = EMPTY_ELEMENTDATA;
     }
 
 
@@ -62,18 +62,18 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     private E elementsData(int index) {
-        return (E) elementsData[index];
+        return (E) elementData[index];
     }
 
     @Override
     public boolean add(E e) {
         ensureCapacityInternal(size + 1);
-        elementsData[size++] = e;
+        elementData[size++] = e;
         return true;
     }
 
     private void ensureCapacityInternal(int minCapacity) {
-        if (elementsData == EMPTY_ELEMENTDATA) {
+        if (elementData == EMPTY_ELEMENTDATA) {
             minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);
         }
 
@@ -81,13 +81,13 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     private void ensureExplicitCapacity(int minCapacity) {
-        if (minCapacity - elementsData.length > 0) {
+        if (minCapacity - elementData.length > 0) {
             grow(minCapacity);
         }
     }
 
     private void grow(int minCapacity) {
-        int oldCapacity = elementsData.length;
+        int oldCapacity = elementData.length;
         int newCapacity = oldCapacity + (oldCapacity >> 1);
         if (newCapacity - minCapacity < 0) {
             newCapacity = minCapacity;
@@ -106,26 +106,26 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     private void growCopy(int newCapacity) {
-        if (newCapacity - elementsData.length > 0) {
+        if (newCapacity - elementData.length > 0) {
             Object[] newArray = new Object[newCapacity];
 
-            for (int i = 0; i < elementsData.length; i++) {
-                newArray[i] = elementsData[i];
-                elementsData[i] = null;
+            for (int i = 0; i < elementData.length; i++) {
+                newArray[i] = elementData[i];
+                elementData[i] = null;
             }
-            elementsData = newArray;
+            elementData = newArray;
         }
     }
 
     private void addCopy(int index) {
         for (int i = size; i > index; i--) {
-            elementsData[i] = elementsData[i - 1];
+            elementData[i] = elementData[i - 1];
         }
     }
 
     private void removeCopy(int index) {
         for (int i = index; i < size; i++) {
-            elementsData[i] = elementsData[i + 1];
+            elementData[i] = elementData[i + 1];
         }
     }
 
@@ -135,7 +135,7 @@ public class MyArrayList<E> implements MyList<E> {
 
         ensureCapacityInternal(size + 1);
         addCopy(index);
-        elementsData[index] = e;
+        elementData[index] = e;
         size++;
     }
 
@@ -150,7 +150,17 @@ public class MyArrayList<E> implements MyList<E> {
         if (numMoved > 0) {
             removeCopy(index);
         }
-        elementsData[--size] = null;
+        elementData[--size] = null;
         return oldValue;
     }
+
+    @Override
+    public void clear() {
+        for (int i = 0; i < size; i++) {
+            elementData[i] = null;
+        }
+        size = 0;
+    }
+
+
 }

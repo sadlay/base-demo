@@ -25,7 +25,7 @@ public class MatchTest {
     }
 
     public static boolean isMatch(String str) {
-        ArrayStack<Character> stack = new ArrayStack<>();
+        MyArraryStack<Character> stack = new MyArraryStack<>();
         char[] chars = str.toCharArray();
         for (char c : chars) {
             // 是否为左括号

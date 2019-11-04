@@ -1,8 +1,5 @@
 package stack;
 
-import list.MyArrayList;
-import list.MyList;
-
 /**
  * StringReversalTest 字符串翻转测试
  *
@@ -14,7 +11,7 @@ public class StringReversalTest {
         String str = "hello world";
         System.out.println("-----翻转前-----");
         System.out.println(str);
-        ArrayStack stack = new ArrayStack();
+        MyArraryStack stack = new MyArraryStack();
         char[] chars = str.toCharArray();
         for (char c : chars) {
             stack.push(c);

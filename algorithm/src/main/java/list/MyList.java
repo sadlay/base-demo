@@ -20,4 +20,6 @@ public interface MyList<E> {
     void add(int index, E e);
 
     E remove(int index);
+
+    void clear();
 }

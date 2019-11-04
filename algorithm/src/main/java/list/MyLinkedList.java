@@ -100,6 +100,19 @@ public class MyLinkedList<E> implements MyList<E> {
         return unlink(node(index));
     }
 
+    @Override
+    public void clear() {
+        for (Node<E> x = first; x != null; ) {
+            Node<E> next = x.next;
+            x.item = null;
+            x.next = null;
+            x.prev = null;
+            x = next;
+        }
+        first = last = null;
+        size = 0;
+    }
+
     private E unlink(Node<E> node) {
         E item = node.item;
         Node<E> prev = node.prev;
@@ -157,5 +170,6 @@ public class MyLinkedList<E> implements MyList<E> {
             this.next = next;
         }
     }
+
 
 }

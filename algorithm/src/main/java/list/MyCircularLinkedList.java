@@ -84,6 +84,18 @@ public class MyCircularLinkedList<E> implements MyList<E> {
         return unlink(node(index));
     }
 
+    @Override
+    public void clear() {
+        for (Node<E> x = head; x != null; ) {
+            Node<E> next = x.next;
+            x.prev = null;
+            x.next = null;
+            x.item = null;
+            x = next;
+        }
+        size = 0;
+    }
+
     private E unlink(Node<E> node) {
         E item = node.item;
 
@@ -184,10 +196,10 @@ public class MyCircularLinkedList<E> implements MyList<E> {
         list.add(2, "阳泉");
         list.add(0, "太原");
 
-
-
         for (int i = 0; i < 100; i++) {
             System.out.println(list.next());
         }
+
+        list.clear();
     }
 }
