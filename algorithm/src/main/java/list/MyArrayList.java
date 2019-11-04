@@ -51,6 +51,12 @@ public class MyArrayList<E> implements MyList<E> {
         }
     }
 
+    private void rangeCheckForAdd(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException(outOfBoundMsg(index));
+        }
+    }
+
     private String outOfBoundMsg(int index) {
         return "Index: " + index + ", Size: " + size;
     }
@@ -133,11 +139,6 @@ public class MyArrayList<E> implements MyList<E> {
         size++;
     }
 
-    private void rangeCheckForAdd(int index) {
-        if (index > size || index < 0) {
-            throw new IndexOutOfBoundsException(outOfBoundMsg(index));
-        }
-    }
 
     @Override
     public E remove(int index) {
