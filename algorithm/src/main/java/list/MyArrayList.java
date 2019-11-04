@@ -152,34 +152,4 @@ public class MyArrayList<E> implements MyList<E> {
         elementsData[--size] = null;
         return oldValue;
     }
-
-
-    public static void main(String[] args) {
-        MyList<Integer> myList = new MyArrayList<>();
-        myList.add(5);
-        myList.add(1);
-        myList.add(2);
-
-
-        System.out.println("begin size: " + myList.size());
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.print(myList.get(i) + " ");
-        }
-        System.out.println();
-
-        myList.add(1, 7);
-        System.out.println("after add element size: " + myList.size());
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.print(myList.get(i) + " ");
-        }
-        System.out.println();
-        myList.remove(2);
-        System.out.println("after remove element size: " + myList.size());
-
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.print(myList.get(i) + " ");
-        }
-        System.out.println();
-    }
-
 }
