@@ -1,7 +1,7 @@
 package list;
 
 /**
- * MyList
+ * 线性表接口
  *
  * @Author: sadlay
  * @Date: Created in 2019/11/1 9:26

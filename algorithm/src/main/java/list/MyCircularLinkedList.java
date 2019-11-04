@@ -1,7 +1,7 @@
 package list;
 
 /**
- * MyCircleLinkedList
+ * 循环双向链表
  *
  * @Author: sadlay
  * @Date: Created in 2019/11/4 13:39
@@ -184,7 +184,7 @@ public class MyCircularLinkedList<E> implements MyList<E> {
         list.add(2, "阳泉");
         list.add(0, "太原");
 
-        
+
 
         for (int i = 0; i < 100; i++) {
             System.out.println(list.next());

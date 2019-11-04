@@ -1,7 +1,7 @@
 package list;
 
 /**
- * MyLinkedList
+ * 双向链表
  *
  * @Author: sadlay
  * @Date: Created in 2019/11/1 17:09

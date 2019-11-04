@@ -1,7 +1,7 @@
 package list;
 
 /**
- * MyArrayList
+ * 顺序线性表
  *
  * @Author: sadlay
  * @Date: Created in 2019/11/1 9:54
