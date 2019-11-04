@@ -23,19 +23,23 @@ public class Test {
         myList.add(2);
 
         System.out.println("begin: ");
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.print(myList.get(i) + " ");
-        }
-        System.out.println();
-        myList.add(1, 7);
-        System.out.println("after add element: " + 7 + " from the index: " + 1);
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.print(myList.get(i) + " ");
-        }
-        System.out.println();
-        myList.remove(2);
-        System.out.println("after remove element from the index: " + 2);
+        print(myList);
 
+        myList.add(8);
+        System.out.println("after add element: " + 8);
+        print(myList);
+
+        myList.add(1, 7);
+        System.out.println("after add element: " + 7 + " at the index: " + 1);
+        print(myList);
+
+        myList.remove(2);
+        System.out.println("after remove element at the index: " + 2);
+
+        print(myList);
+    }
+
+    private static void print(MyList myList){
         for (int i = 0; i < myList.size(); i++) {
             System.out.print(myList.get(i) + " ");
         }
