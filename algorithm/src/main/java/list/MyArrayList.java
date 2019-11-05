@@ -161,6 +161,4 @@ public class MyArrayList<E> implements MyList<E> {
         }
         size = 0;
     }
-
-
 }

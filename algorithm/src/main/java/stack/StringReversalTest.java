@@ -21,6 +21,5 @@ public class StringReversalTest {
             System.out.print(stack.pop());
         }
         System.out.println();
-
     }
 }
