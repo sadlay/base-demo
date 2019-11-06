@@ -6,9 +6,7 @@ import java.util.EmptyStackException;
 /**
  * MyArraryStack
  *
- * @Author: sadlay
- * @Date: Created in 2019/11/4 16:32
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 
 public class MyArraryStack<E> implements MyStack<E> {

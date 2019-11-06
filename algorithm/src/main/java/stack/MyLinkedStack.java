@@ -5,9 +5,7 @@ import java.util.EmptyStackException;
 /**
  * MyLinkedStack
  *
- * @Author: sadlay
- * @Date: Created in 2019/11/4 16:32
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 
 public class MyLinkedStack<E> implements MyStack<E> {

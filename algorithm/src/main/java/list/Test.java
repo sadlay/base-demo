@@ -3,9 +3,7 @@ package list;
 /**
  * Test
  *
- * @Author: sadlay
- * @Date: Created in 2019/11/4 11:23
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 public class Test {
 

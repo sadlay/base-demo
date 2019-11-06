@@ -3,9 +3,7 @@ package sort;
 /**
  * ChoiceSort 选择排序
  *
- * @Author: sadlay
- * @Date: Created in 2019/8/21 14:44
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 
 public class ChoiceSort {

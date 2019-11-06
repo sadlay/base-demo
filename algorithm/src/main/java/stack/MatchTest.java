@@ -7,9 +7,7 @@ import java.util.Map;
  * MatchTest
  * 利用栈进行最近匹配测试
  *
- * @Author: sadlay
- * @Date: Created in 2019/8/22 13:49
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 
 public class MatchTest {

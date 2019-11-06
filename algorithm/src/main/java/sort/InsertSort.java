@@ -3,9 +3,7 @@ package sort;
 /**
  * InsertSort 插入排序
  *
- * @Author: sadlay
- * @Date: Created in 2019/8/21 15:14
- * @Modified By:IntelliJ IDEA
+ * @author  sadlay
  */
 
 

@@ -5,9 +5,7 @@ import java.util.Arrays;
 /**
  * Fibonacci斐波那契数列
  *
- * @Author: sadlay
- * @Date: Created in 2019/11/5 13:22
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 
 public class Fibonacci {

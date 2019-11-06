@@ -4,9 +4,7 @@ package stack;
  * Arithmetic
  * 利用栈进行四则运算
  *
- * @Author: sadlay
- * @Date: Created in 2019/11/6 8:58
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 
 public class Arithmetic {
@@ -21,7 +19,16 @@ public class Arithmetic {
         System.out.println(v);
     }
 
-
+    /**
+     * 中缀表达式转后缀表达式
+     * 规则如下；
+     * 从左到右遍历中缀表达式的每个数字和符号，若是数字则直接输出；
+     * 若是符号，则判断与栈顶符号的优先级，是右括号或优先级不高于栈顶符号（乘除优先加减）则栈顶元素依次出栈并输出，并将当前符号进栈。
+     * 一直到最终输出后缀表达式为止。
+     *
+     * @param infix 中缀表达式
+     * @return 后缀表达式
+     */
     private String postfix(String infix) {
         StringBuilder sb = new StringBuilder();
         String[] arr = infix.split("\\ ");
@@ -49,15 +56,25 @@ public class Arithmetic {
                 stack.pop();
             }
         }
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             sb.append(stack.pop()).append(" ");
         }
         return sb.toString();
     }
 
-    private double arithmeticPostfix(String text) {
+    /**
+     * 对后缀表达式进行计算
+     * 规则如下：
+     * 从左至右遍历表达式的每个数字和符号，遇到是数字就进栈；
+     * 遇到是符号，就将处于栈顶的两个数字出栈，进行运算，并将结果入栈。
+     * 一直得到最终获得结果。
+     *
+     * @param postfix 后缀表达式
+     * @return 结果
+     */
+    private double arithmeticPostfix(String postfix) {
         MyStack<Double> stack = new MyArraryStack<>();
-        String[] s1 = text.split("\\ ");
+        String[] s1 = postfix.split("\\ ");
         for (int i = 0; i < s1.length; i++) {
             String s2 = s1[i];
             if (isNum(s2)) {

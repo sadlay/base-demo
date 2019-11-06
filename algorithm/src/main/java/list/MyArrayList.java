@@ -3,9 +3,7 @@ package list;
 /**
  * 顺序线性表
  *
- * @Author: sadlay
- * @Date: Created in 2019/11/1 9:54
- * @Modified By:IntelliJ IDEA
+ * @author sadlay
  */
 public class MyArrayList<E> implements MyList<E> {
     private static final int DEFAULT_CAPACITY = 10;

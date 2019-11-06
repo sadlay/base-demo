@@ -3,7 +3,7 @@ package stack;
 /**
  * StringReversalTest 字符串翻转测试
  *
- * @Author: sadlay
+ * @author sadlay
  */
 public class StringReversalTest {
 
