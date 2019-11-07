@@ -48,7 +48,7 @@ public class MyArrayQueue<E> implements MyQueue<E> {
         System.arraycopy(elementData, 0, a, n, h);
         elementData = a;
         head = 0;
-        tail = n;
+        tail = l;
     }
 
     @Override
