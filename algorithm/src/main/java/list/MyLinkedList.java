@@ -157,7 +157,7 @@ public class MyLinkedList<E> implements MyList<E> {
         return "Index: " + index + ", Size: " + size;
     }
 
-    private static class Node<E> {
+    private class Node<E> {
         E item;
         Node<E> next;
         Node<E> prev;

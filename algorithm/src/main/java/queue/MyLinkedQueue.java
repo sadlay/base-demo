@@ -88,7 +88,8 @@ public class MyLinkedQueue<E> implements MyQueue<E> {
         size = 0;
 
     }
-    private static class Node<E> {
+
+    private class Node<E> {
         private E item;
         private Node<E> prev;
         private Node<E> next;
